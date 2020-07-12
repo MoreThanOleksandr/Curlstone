@@ -1,0 +1,250 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html,
+body {
+    height: 100%;
+    position: relative;
+    background-color: #28292d;
+    overflow-x: hidden;
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 400;
+    color: #fff;
+    overflow-x: hidden;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.content {
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+ul,
+li,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: inherit;
+}
+input {
+    outline: none;
+    border: none;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// buttons
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.gradient__btn-box {
+    overflow: hidden;
+}
+.gradient__btn {
+    background: linear-gradient(16.7deg, #6359dc 0%, #1aa7c8 53.86%, #7fc922 100%);
+    position: relative;
+    color: #fff;
+    &::after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 61px;
+        content: "";
+        border-top: 13px solid rgb(20, 51, 21);
+        border-left: 13px solid transparent;
+    }
+}
+//  header
+
+.header__logo-box {
+    position: absolute;
+    background-color: #28292d;
+    width: 448px;
+    height: 100px;
+    padding-left: 135px;
+    filter: drop-shadow(4px 12px 16px rgba(0, 0, 0, 0.1));
+    z-index: 2;
+    &::after {
+        position: absolute;
+        right: -100px;
+        width: 100px;
+        height: 100px;
+        content: "";
+        border-bottom: 100px solid transparent;
+        border-left: 100px solid #28292d;
+    }
+}
+.logo__text {
+    position: absolute;
+    top: 38px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $green;
+    margin-left: 12px;
+}
+.header__menu {
+    text-align: right;
+    li {
+        display: inline-block;
+        padding: 34px 25px 23px;
+        position: relative;
+        &::before {
+            display: none;
+            content: "";
+            width: 4px;
+            height: 4px;
+            background-color: $green;
+            position: absolute;
+            left: 50%;
+            top: 26px;
+        }
+        &:hover {
+            a {
+                color: $green;
+            }
+            &::before {
+                display: block;
+            }
+        }
+    }
+    a {
+        color: #fff;
+    }
+}
+
+// footer
+
+.footer__inner {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    color: #ccc;
+}
+.footer__col {
+    max-width: 250px;
+    width: 100%;
+    & + .footer__col {
+        margin-left: 100px;
+    }
+}
+.footer__col-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.footer__social {
+    margin-left: -25px;
+    li {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        border: 1px solid #cccccc;
+        border-radius: 50%;
+        position: relative;
+        text-align: center;
+        margin-left: 25px;
+        margin-bottom: 15px;
+        transition: all .3s;
+        &:hover {
+            background-color: #ccc;
+            a::before{
+                color: $bg;
+            }
+        }
+    }
+    a::before {
+        color: #ccc;
+        font-size: 32px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .3s;
+    }
+}
+.footer__menu {
+    li + li {
+        border-top: 1px solid #4e4f53;
+        line-height: 28px;
+    }
+    a {
+        font-weight: 500;
+        padding-left: 30px;
+        text-transform: uppercase;
+        color: #ccc;
+        position: relative;
+        transition: all 0.3s;
+        &::before {
+            content: "\f054";
+            font-family: "icomoon";
+            position: absolute;
+            left: 0;
+            color: $green;
+        }
+        &:hover {
+            color: $green;
+            padding-left: 35px;
+        }
+    }
+}
+.footer__contact {
+    padding-left: 35px;
+    display: block;
+    position: relative;
+    margin-bottom: 15px;
+    line-height: 18px;
+    a {
+        color: #ccc;
+    }
+    &::before {
+        position: absolute;
+        left: 0;
+        color: $green;
+        font-size: 20px;
+    }
+}
+.footer__copy {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px 0;
+    color: #ccc;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
