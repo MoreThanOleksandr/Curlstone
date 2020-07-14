@@ -11,7 +11,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 90vh;
     position: relative;
     opacity: 0.6;
 }
@@ -45,7 +45,7 @@
 }
 .dots-slider__inner {
     position: absolute;
-    bottom: -60px;
+    bottom: 39px;
     right: 50%;
     transform: translateX(50%);
     width: 100px;
@@ -79,7 +79,7 @@
     padding: 35px 30px 55px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .icons-item {
     width: 100%;
@@ -123,8 +123,11 @@
         filter: drop-shadow(14px 14px 10px rgba(0, 0, 0, 0.1));
     }
 }
+.icons-item__last {
+    text-align: right;
+}
 .icons-item__last .icons-item__title {
-    padding-left: 30px;
+    padding-left: 50px;
     text-align: right;
 }
 
@@ -132,6 +135,9 @@
 .properties {
     padding: 23px 0 96px;
     box-shadow: 0px 30px 27px rgba(0, 0, 0, 0.08);
+    .slick-slide + .slick-slide {
+        margin-left: 10px;
+    }
 }
 .section__title {
     font-size: 36px;
@@ -147,6 +153,7 @@
         height: 625px;
     }
 }
+
 .properties {
     padding-top: 87px;
 }
@@ -160,6 +167,25 @@
     font-size: 16px;
     line-height: 24px;
     color: #e5e5e5;
+}
+.clients__box {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.clients-item {
+    flex-basis: 25%;
+    text-align: center;
+    margin-bottom: 10px;
+    img {
+        transition: all 0.3s;
+    }
+    &:hover {
+        img {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .main-form__inner {
@@ -195,12 +221,15 @@
             opacity: 0.5;
         }
     }
-    .input--btn{
+    .input--btn {
         padding: 20px 170px 23px 20px;
     }
     .form-row {
         display: flex;
         justify-content: space-between;
+        label+label{
+            margin-left: 30px;
+        }
     }
     .jq-selectbox {
         display: block;
@@ -250,10 +279,9 @@
             }
         }
     }
-    .gradient__btn::after{
+    .gradient__btn::after {
         border-top: 13px solid $bg;
     }
-    
 }
 .main-form__title {
     max-width: 240px;
@@ -272,6 +300,33 @@
         font-weight: 400;
         width: 200px;
     }
+}
+
+//      work page
+
+.work__content{
+    background-color: #fff;
+    .header{
+        background-color: $bg;
+    }
+}
+
+.work-bg{
+    img{
+        width: 100%;
+    }
+}
+.work-page__title{
+    text-align: center;
+    font-size: 160px;
+    line-height: 59px;
+    font-weight: 800;
+    letter-spacing: 9.6px;
+    height: 59px;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-shadow: 4px 12px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-20%);
 }
 
 @import "media";

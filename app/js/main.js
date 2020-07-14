@@ -8,7 +8,6 @@ $(function () {
     $('.dots-slider__inner').slick({
         slidesToShow: 4,
         slidesToScroll: 4,
-        
         infinite: true,
         arrows: false,
         asNavFor: '.main-slider__inner'
@@ -24,6 +23,10 @@ $(function () {
         centerMode: true,
         infinite: true,
         variableWidth: true
+    });
+
+    $('.menu__btn').on('click', function () {
+        $('.menu__list').slideToggle();
     });
 
     $('select').styler();
