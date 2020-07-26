@@ -304,14 +304,16 @@
 
 //      work page
 
-.work__content {
+.work__content,
+.properties__content {
     background-color: #fff;
     .header {
         background-color: $bg;
     }
 }
 
-.work-bg {
+.work-bg,
+.properties-bg {
     img {
         width: 100%;
     }
@@ -412,6 +414,73 @@
         font-family: "icomoon";
         content: "\f06e";
         margin-right: 10px;
+    }
+}
+
+//      properties page
+
+.properties__content {
+    color: #000;
+    font-size: 16px;
+    line-height: 24px;
+}
+.properties__info-inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0 30px;
+}
+.properties__story{
+    margin-right: 46px;
+}
+.properties__story-title {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 600;
+    margin: 40px 0 34px;
+    span{
+        display: block;
+    }
+}
+.properties__card{
+    padding: 10px 42px 20px;
+    max-width: 370px;
+    width: 100%;
+    box-shadow: (4px 12px 16px rgba(0, 0, 0, 0.1));
+}
+.properties__card-logo{
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+}
+.properties__card-title{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 9px;
+}
+.detail__box{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 9px 0;
+    border-bottom: 1px solid #DDD;
+    span{
+        display: block;
+    }
+}
+.detail__left-row{
+    text-align: right;
+    color: #c5c6c7;
+    margin-right: 10px;
+}
+.properties__card-format{
+    span{
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        background-color: $green;
+        padding: 4px 14px 4px 17px;
+        border-radius: 20px;
     }
 }
 
