@@ -143,6 +143,14 @@ button {
             }
         }
     }
+    li.current--page{
+        a{
+            color: $green;
+        }
+        &::before{
+            display: block;
+        }
+    }
     a {
         color: #fff;
     }

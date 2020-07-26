@@ -227,7 +227,7 @@
     .form-row {
         display: flex;
         justify-content: space-between;
-        label+label{
+        label + label {
             margin-left: 30px;
         }
     }
@@ -304,19 +304,19 @@
 
 //      work page
 
-.work__content{
+.work__content {
     background-color: #fff;
-    .header{
+    .header {
         background-color: $bg;
     }
 }
 
-.work-bg{
-    img{
+.work-bg {
+    img {
         width: 100%;
     }
 }
-.work-page__title{
+.work-page__title {
     text-align: center;
     font-size: 160px;
     line-height: 59px;
@@ -325,8 +325,94 @@
     height: 59px;
     overflow: hidden;
     text-transform: uppercase;
-    text-shadow: 4px 12px 16px rgba(0, 0, 0, 0.1);
+    // text-shadow: 4px 12px 16px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(4px 12px 16px rgba(0, 0, 0, 0.1));
     transform: translateY(-20%);
+}
+.work__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 74px;
+}
+.work__item {
+    flex-basis: 50%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 464px;
+    transition: all 0.3s;
+    &:hover {
+        transform: scale(0.96);
+    }
+}
+.work__item-title {
+    position: absolute;
+    bottom: 0;
+    left: 26px;
+}
+.work__item-name {
+    font-size: 20px;
+    line-height: 42px;
+    font-weight: 600;
+    &::after {
+        content: "\f061";
+        font-family: "icomoon";
+        margin-left: 15px;
+    }
+    &:hover {
+        cursor: pointer;
+        color: $green;
+        &::after {
+            color: $green;
+        }
+    }
+}
+.work__item-group {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.work__item-group--icon {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    transform: translateY(20%);
+    position: relative;
+    &::before {
+        font-family: "icomoon";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+}
+.group--comics {
+    .work__item-group--icon::before {
+        content: "\f005";
+    }
+}
+.group--serial {
+    .work__item-group--icon::before {
+        content: "\f054";
+    }
+}
+.work__item-views {
+    font-size: 16px;
+    line-height: 24px;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    margin-bottom: 20px;
+    &::before {
+        font-family: "icomoon";
+        content: "\f06e";
+        margin-right: 10px;
+    }
 }
 
 @import "media";
