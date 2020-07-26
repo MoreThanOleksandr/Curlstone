@@ -110,10 +110,14 @@
     .footer__col {
         max-width: 100%;
         margin: 0 15px;
+        padding-right: 15px;
         & + .footer__col {
             margin-left: 0;
             padding-left: 15px;
         }
+    }
+    .work__item{
+        height: 300px;
     }
 }
 @media (max-width: 850px) {
@@ -136,6 +140,11 @@
     }
 }
 
+@media (max-width: 700px) {
+    .work__item{
+        flex-basis: 100%;
+    }
+}
 @media (max-width: 600px) {
     .clients-item {
         flex-basis: 50%;
@@ -172,5 +181,8 @@
     }
     .clients-item {
         flex-basis: 100%;
+    }
+    .header__menu{
+        width: 100%;
     }
 }
