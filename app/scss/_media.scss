@@ -119,6 +119,12 @@
     .work__item{
         height: 300px;
     }
+    .work-page__title{
+        font-size: 100px;
+        height: 40px;
+        transform: translateY(-40%);
+        line-height: 39px;
+    }
 }
 @media (max-width: 850px) {
     .main-form__inner {
